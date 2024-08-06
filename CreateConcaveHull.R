@@ -5,7 +5,7 @@ library(concaveman)
 
 ##### Set the Parameters Below #####
 
-PWS_ID = "OH8301512"
+PWS_ID = "OH8301603"
 concavity_setting = 2
 
 workspace_dir = "C:/Users/TRichman.ERG/Tyler/Projects/2024/PWS Georeferencing/GIS/Tool Runs"
@@ -23,5 +23,5 @@ if (!dir.exists(file.path(workspace_dir, paste0("./", PWS_ID)))){
   dir.create(file.path(workspace_dir, paste0("./", PWS_ID)))
 }
 
-st_write(hull_sf, file.path(workspace_dir, paste0("./", PWS_ID, "/", PWS_ID, ".shp")))
+st_write(hull_sf, file.path(workspace_dir, paste0(PWS_ID, "/", PWS_ID, ".shp")))
 
